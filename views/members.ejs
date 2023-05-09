@@ -1,0 +1,24 @@
+<%- include("templates/header") %>
+
+
+<p>Welcome, <%= username %></p>
+
+<% var cat = Math.floor(Math.random() * 3); %>
+
+<div class="row mb-3 text-center">
+    <div class="col-md-4 themed-grid-col"><img class="img-fluid" src= "/cat1.jpeg"/></div>
+    <div class="col-md-4 themed-grid-col"><img class="img-fluid" src= "/cat2.avif"/></div>
+    <div class="col-md-4 themed-grid-col"><img class="img-fluid" src= "/cat3.jpeg"/></div>
+  </div>
+
+<% if (cat == 0) { %>
+    <p>Kiwi: <img src="/cat1.jpeg" style="width:250px"></p>
+<% } else if (cat == 1) { %>
+    <p>Noya: <img src="/cat2.avif" style="width:250px;"></p>
+<% } else if (cat == 2) { %>
+    <p>Two: <img src="/cat3.jpeg" style="width:250px;"></p>
+<% } %>
+
+<p><button class="btn btn-danger rounded-pill px-3" type="button"onclick="location.href='/logout';" id="logout">Log Out</button></p>
+
+<%- include("templates/footer") %>

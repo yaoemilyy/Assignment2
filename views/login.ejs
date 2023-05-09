@@ -1,0 +1,47 @@
+
+    <%- include("templates/header") %> 
+
+    <main class="form-signin w-100 m-auto">
+        <div class="d-flex flex-wrap justify-content-center py-5 mb-4 border-bottom">
+          <form class="text-center" action="/loggingin" method="post">
+            <img class="mb-4" src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      
+            <div class="form-floating">
+              <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+              <label for="password">Password</label>
+            </div>
+      
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
+          </form>
+        </div>
+      </main>
+      
+
+
+    <!-- Log in
+    <form action='/loggingin' method='post'>
+    <input name='email' type='text' placeholder='email'>
+    <input name='password' type='password' placeholder='password'>
+    <button>Submit</button>
+    </form> -->
+
+       
+    <% if (error) { %>
+        <p>Invalid email/password combinations</p>
+        <% } %>
+
+    <%- include("templates/footer") %> 
+
+
+
